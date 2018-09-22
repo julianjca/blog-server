@@ -148,7 +148,9 @@ describe('Articles', () => {
 
   afterEach((done) => { //Before each test we empty the database
     Article.remove({}, (err) => {
-       done();
+      User.remove({}, err=>{
+        done();
+      })
     });
   });
 });

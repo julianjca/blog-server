@@ -25,7 +25,8 @@ if(process.env.NODE_ENV === 'test'){
   url = `mongodb://localhost:27017/test-blog-db`;
 }
 else{
-  url = `mongodb://${process.env.USER_MLAB}:${process.env.PASSWORD}@ds159772.mlab.com:59772/blog`;
+  // url = `mongodb://admin:admin1234@ds159772.mlab.com:59772/blog`;
+  url = `mongodb://localhost:27017/blog-db`;
 }
 
 mongoose.connect(url,{ useNewUrlParser: true });

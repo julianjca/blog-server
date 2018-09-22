@@ -124,7 +124,9 @@ describe('Comments', () => {
 
   afterEach((done) => { //Before each test we empty the database
     Comment.remove({}, (err) => {
-       done();
+      User.remove({}, err=>{
+        done();
+      })
     });
   });
 });
